@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -52,7 +53,8 @@ public class MainActivity extends AppCompatActivity {
         loginButton.registerCallback(callbackManager, new FacebookCallback<LoginResult>() {
             @Override
             public void onSuccess(LoginResult loginResult) {
-
+                Log.e("message",loginResult.toString());
+                Log.e("msg","suceesfull");
             }
 
             @Override
@@ -62,7 +64,10 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void onError(FacebookException error) {
+                Log.e("message",error.toString());
+                Log.e("msg","fail");
 
+                //Toast.makeText(getActivity(),error.toString(),Toast.LENGTH_LONG).show();
             }
         });
     }

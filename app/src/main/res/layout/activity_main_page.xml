@@ -19,7 +19,7 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Made by Kartik Kumar Srivastava"
+        android:text="Made by Ritika Gupta"
         android:textSize="24sp"
         android:textStyle="bold"
         android:layout_gravity="right"
